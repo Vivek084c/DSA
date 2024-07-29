@@ -11,6 +11,17 @@ class Node{
         this ->data = data;
         this ->next = NULL;
     }
+
+    // destructor 
+    ~Node(){
+        int value = this -> data;
+        // memory free
+        if (this->next != NULL){
+            delete next;
+            this->next = NULL;
+        }
+        cout<<"memory is free for node with data "<< value << endl;
+    }
 };
 
 void inser_at_head(Node* &head, int data){
@@ -30,6 +41,30 @@ void print_list(Node* &head){
         temp = temp ->next;
     }
     cout<<endl;
+}
+
+//deleting the node
+void deleteNode(int position, Node* &head){
+    // deleteing the starting node
+    if (position == 1){
+        Node* temp = head;
+        head = head->next;
+        // free the memory
+        delete temp;
+    }
+    else{
+        // deleting other node
+        Node* cur = head;
+        Node* prev  = NULL;
+        int  cnt = 1;
+        while (cnt <= position){
+            prev = cur;
+            cur = cur->next;
+            cnt ++;
+        }
+        prev->next = cur->next;
+         
+    }
 }
 
 
