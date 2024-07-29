@@ -87,5 +87,9 @@ inser_at_head(head, 15);
 
 print_list(head);
 
+deleteNode(2, head);
+
+print_list(head);
+
 return 0;
 }
