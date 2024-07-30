@@ -63,6 +63,7 @@ void deleteNode(int position, Node* &head){
             cnt ++;
         }
         prev->next = cur->next;
+        cur -> next = NULL;
          
     }
 }

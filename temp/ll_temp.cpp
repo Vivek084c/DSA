@@ -20,8 +20,7 @@ int main(){
     Node* node1 = new Node(10);
     cout<<node1->data<<endl;
 
-
-
+    
 
     return 0;
 }
