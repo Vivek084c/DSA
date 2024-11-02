@@ -99,6 +99,6 @@ for i in range(n//2,0,-1):
 print("the array values are: ")
 for i in arr:
     print(i, sep=" ")
-
+print("vivek was here")
 
 
